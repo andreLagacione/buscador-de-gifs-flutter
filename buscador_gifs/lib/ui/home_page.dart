@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    this._getGifs().then((map) {
+    _getGifs().then((map) {
 
     });
   }
@@ -58,6 +58,12 @@ class _HomePageState extends State<HomePage> {
                   fontSize: 18
               ),
               textAlign: TextAlign.center,
+              onSubmitted: (text) {
+                setState(() {
+                  _search = text;
+                  _offsset = 0;
+                });
+              },
             ),
           ),
           Expanded(
@@ -91,17 +97,54 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  int _getCount(List data) {
+    if (_search == null) {
+      return data.length;
+    } else {
+      return data.length + 1;
+    }
+  }
+
   Widget _createGifTable(BuildContext context, AsyncSnapshot snapshot) {
     return GridView.count(
       crossAxisCount: 2,
-      children: List.generate(snapshot.data["data"].length, (index) {
-        return GestureDetector(
-          child: Image.network(
-            snapshot.data["data"][index]["images"]["fixed_height"]["url"],
-            height: 300,
-            fit: BoxFit.cover
-          ),
-        );
+      children: List.generate(_getCount(snapshot.data["data"]), (index) {
+        if (_search == null || index < snapshot.data["data"].length) {
+          return GestureDetector(
+            child: Image.network(
+                snapshot.data["data"][index]["images"]["fixed_height"]["url"],
+                height: 300,
+                fit: BoxFit.cover
+            ),
+          );
+        } else {
+          return Container(
+            child: GestureDetector(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.add,
+                    color: Colors.white,
+                    size: 70,
+                  ),
+                  Text(
+                    "Carregar mais...",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22
+                    ),
+                  )
+                ],
+              ),
+              onTap: () {
+                setState(() {
+                  _offsset += 25;
+                });
+              },
+            )
+          );
+        }
       }),
     );
   }
