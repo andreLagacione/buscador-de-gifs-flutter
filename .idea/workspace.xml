@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9a710a4-3e33-442f-9798-bf846387768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/buscador_gifs/lib/ui/gif_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buscador_gifs/lib/ui/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/buscador_gifs/lib/ui/home_page.dart" afterDir="false" />
-    </list>
+    <list default="true" id="e9a710a4-3e33-442f-9798-bf846387768d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buscador_gifs/lib/ui/home_page.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="122" selection-end-column="14" />
+            <state relative-caret-position="256">
+              <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="89" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -216,8 +212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/buscador_gifs/lib/ui/home_page.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="122" selection-end-column="14" />
+        <state relative-caret-position="256">
+          <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="89" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
